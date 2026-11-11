@@ -1,0 +1,560 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #101f34;
+  --navy-2: #1a2c45;
+  --red-900: #7a0d14;
+  --red-800: #a10f1d;
+  --red-700: #c21827;
+  --red-600: #dd3d3d;
+  --yellow-400: #fbdf61;
+  --yellow-500: #ffd93a;
+  --yellow-600: #f8c938;
+  --cream: #fff8ef;
+  --white: #fff;
+  --shadow: rgba(0, 0, 0, 0.26);
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --dark: #1a1a1a;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d1420;
+  color: var(--white);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  position: relative;
+  width: min(100%, 430px);
+  min-height: 900px;
+  background: linear-gradient(180deg, #631114 0%, #8c1f1f 26%, #77131a 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 26px 40px rgba(0, 0, 0, 0.55);
+}
+
+.topbar {
+  height: 62px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.topbar-left {
+  letter-spacing: 0.04em;
+  font-size: 1.05rem;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.mainbar {
+  height: 78px;
+  background: rgba(9, 18, 34, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-btn,
+.action-icon,
+.menu-toggle,
+.small-round,
+.bottom-nav {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav-btn,
+.action-icon {
+  width: 34px;
+  height: 34px;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-header {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-header__text {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.brand-header__tiny {
+  font-size: 0.76rem;
+  opacity: 0.82;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-icon {
+  font-size: 1.4rem;
+}
+
+.content-area {
+  padding: 18px 14px 90px;
+}
+
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.menu-toggle {
+  width: 52px;
+  height: 48px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 14px;
+  font-size: 1.7rem;
+}
+
+.brand-badge {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.brand-badge img {
+  width: 160px;
+  height: auto;
+  filter: drop-shadow(0 5px 8px rgba(0,0,0,0.24));
+}
+
+.small-round {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  font-size: 1.25rem;
+}
+
+.small-round.jam {
+  background: #dd3d3d;
+  border-color: rgba(255,255,255,0.2);
+}
+
+.hero-banner {
+  position: relative;
+  margin: 6px auto 10px;
+  padding: 28px 20px 26px;
+  border-radius: 26px;
+  border: 2px solid rgba(255,255,255,0.18);
+  background: linear-gradient(135deg, rgba(255,255,255,0.14), rgba(255,255,255,0.02)),
+    linear-gradient(90deg, #920f12 0%, #bf141a 30%, #e6322a 70%, #8d0f18 100%);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.09);
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08) 0,
+    rgba(255,255,255,0.08) 18px,
+    transparent 18px,
+    transparent 36px
+  );
+  opacity: 0.75;
+}
+
+.hero-label,
+.hero-bubble,
+.hero-tag,
+.hero-banner h1 {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-label {
+  display: inline-block;
+  margin: 0 auto 10px;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.46);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.hero-banner h1 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.06em;
+  transform: rotate(-2deg);
+}
+
+.hero-title-main,
+.hero-title-sub {
+  display: block;
+}
+
+.hero-title-main {
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
+  color: #fff4c2;
+  text-shadow: 0 4px 0 #f7ce3b, 0 8px 18px rgba(0,0,0,0.22);
+}
+
+.hero-title-sub {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  color: #ffec8d;
+  text-shadow: 0 4px 0 #f0bb1d, 0 8px 18px rgba(0,0,0,0.18);
+  margin-top: 12px;
+}
+
+.hero-tag {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff3ca;
+}
+
+.hero-bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.18);
+}
+
+.bubble-one {
+  width: 18px;
+  height: 18px;
+  left: 16%;
+  bottom: 44%;
+}
+
+.bubble-two {
+  width: 30px;
+  height: 30px;
+  right: 18%;
+  top: 28%;
+}
+
+.bubble-three {
+  width: 22px;
+  height: 22px;
+  left: 52%;
+  bottom: 18%;
+}
+
+.games-section {
+  margin-top: 10px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 12px;
+  padding: 0 6px;
+  font-weight: 900;
+  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.section-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff9f88;
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.18);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.game-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 2px solid rgba(255,255,255,0.14);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px var(--card-shadow);
+}
+
+.game-art {
+  position: relative;
+  height: 116px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.corner-tag {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.art-letter {
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+.art-mlbb {
+  background: linear-gradient(135deg, #ff5f63 0%, #d31a2d 100%);
+}
+
+.art-roblox {
+  background: linear-gradient(135deg, #4a8af7 0%, #2a5ce5 100%);
+}
+
+.art-freefire {
+  background: linear-gradient(135deg, #ffbe52 0%, #f1682a 100%);
+}
+
+.art-pubg {
+  background: linear-gradient(135deg, #ff8734 0%, #ff3d3d 100%);
+}
+
+.card-meta {
+  padding: 12px 10px 14px;
+}
+
+.card-meta h3 {
+  margin: 0 0 5px;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.card-meta p {
+  margin: 0;
+  color: #f7d99d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.bottom-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 70px;
+  background: rgba(10,14,18,0.78);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  backdrop-filter: blur(4px);
+}
+
+.bottom-nav {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  opacity: 0.8;
+}
+
+.bottom-nav.active {
+  background: rgba(255,255,255,0.06);
+  opacity: 1;
+}
+
+.login-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(20, 4, 7, 0.42);
+  backdrop-filter: blur(2px);
+}
+
+.login-card {
+  width: min(100%, 370px);
+  padding: 28px 22px 22px;
+  border-radius: 24px;
+  border: 2px solid rgba(255,255,255,0.18);
+  background: linear-gradient(180deg, rgba(140,26,32,0.84), rgba(103,18,24,0.88));
+  box-shadow: 0 18px 28px rgba(0,0,0,0.2);
+}
+
+.login-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffd84e, #ff9114);
+  color: #6f1a16;
+  font-size: 2.4rem;
+  font-weight: 900;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.14);
+}
+
+.login-card h2 {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: clamp(2.1rem, 7vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+
+.login-card p {
+  margin: 0 auto;
+  max-width: 290px;
+  line-height: 1.45;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #f9d7d0;
+}
+
+.google-button {
+  display: block;
+  width: 100%;
+  margin: 22px auto 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+  color: var(--white);
+  font-weight: 800;
+  font-size: 1.12rem;
+  border-radius: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 10px 0 18px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  display: block;
+  height: 2px;
+  flex: 1;
+  background: rgba(255,255,255,0.35);
+}
+
+.terms,
+.help-text {
+  font-size: 0.96rem;
+  color: #f7d9d5;
+  text-align: center;
+}
+
+.terms a,
+.help-text a {
+  color: #f5d96a;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.help-text {
+  margin-top: 22px;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 420px) {
+  body {
+    padding: 0;
+  }
+
+  .phone-frame {
+    width: 100vw;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+}

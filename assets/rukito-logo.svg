@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 260" role="img" aria-labelledby="title desc">
+  <title id="title">RUKITO logo</title>
+  <desc id="desc">A cartoon mascot style logo for RUKITO TOPUP, with yellow and black colors</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#fef2a5"/>
+      <stop offset="100%" stop-color="#f3c92a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="620" height="260" rx="26" fill="#f5d812"/>
+
+  <g transform="translate(30,28)">
+    <circle cx="130" cy="100" r="72" fill="#171717" stroke="#fff" stroke-width="8"/>
+    <path d="M67 120 Q130 180 193 120" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="99" cy="104" r="12" fill="#fff"/>
+    <circle cx="162" cy="104" r="12" fill="#fff"/>
+    <circle cx="100" cy="106" r="5" fill="#111"/>
+    <circle cx="163" cy="106" r="5" fill="#111"/>
+    <path d="M114 136 Q130 150 146 136" fill="none" stroke="#f8a7b7" stroke-width="6" stroke-linecap="round"/>
+    <path d="M75 66 Q92 34 118 58" fill="none" stroke="#1c1c1c" stroke-width="12" stroke-linecap="round"/>
+    <path d="M165 52 Q185 26 201 64" fill="none" stroke="#1c1c1c" stroke-width="12" stroke-linecap="round"/>
+    <path d="M95 38 Q130 0 169 44" fill="none" stroke="#1c1c1c" stroke-width="14" stroke-linecap="round"/>
+    <path d="M73 86 L33 128" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+    <path d="M40 116 Q16 136 27 166" stroke="#111" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M196 80 L246 112" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+    <path d="M235 112 L271 94" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+    <path d="M44 150 L116 170" stroke="#111" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M144 170 L201 150" stroke="#111" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M80 182 L130 212 L180 182" fill="#f3d73e" stroke="#111" stroke-width="8"/>
+    <path d="M92 182 L130 208 L168 182" fill="#f8e96e" stroke="#111" stroke-width="8"/>
+    <path d="M80 176 Q130 240 180 176" fill="#efc61f" stroke="#111" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(260,78)">
+    <text x="0" y="78" font-size="126" font-weight="900" font-family="Arial Black, Arial, sans-serif" fill="#fff7db" stroke="#111" stroke-width="8" paint-order="stroke fill">RUKITO</text>
+    <text x="86" y="156" font-size="54" font-weight="900" font-family="Arial Black, Arial, sans-serif" fill="#fff7db" stroke="#111" stroke-width="6" paint-order="stroke fill">TopUp</text>
+    <path d="M270 120 Q350 28 430 120" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+    <path d="M318 52 L364 18 L392 87" fill="none" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+    <path d="M382 82 L415 118" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>
